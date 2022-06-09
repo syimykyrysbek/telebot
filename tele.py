@@ -8,7 +8,9 @@ def start_message(message):
     bot.send_message(message.chat.id, 'Привет')
 
 
+
 @bot.message_handler(content_types='text')
+
 def sendMessage(message): 
     if message.text.lower() == 'привет':
         bot.send_message(message.chat.id, 'Привет')
@@ -26,7 +28,7 @@ def sendMessage(message):
         bot.send_message(message.chat.id, 'Положителное')
 
     else:
-        bot.send_message(message.chat.id, message.text)
+        bot.send_message(message.chat.id, message.text.title())
         # print(type(message))
 
 print('Бот запушен')
